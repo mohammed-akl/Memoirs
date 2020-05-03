@@ -144,8 +144,8 @@ collections:
         required: true
       - label: "Author"
         name: "author"
-        widget: "relation"
         collection: "authors"
+        widget: "relation"
         displayFields: [display_name]
         searchFields: [display_name]
         required: true
