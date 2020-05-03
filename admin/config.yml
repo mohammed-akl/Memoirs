@@ -92,12 +92,16 @@ collections:
             options:
               - { label: "Enable", value: "enabled" }
               - { label: "Disable", value: "disabled" }
+            default:
+              - { label: "Disable", value: "disabled" }
             required: false
           - label: "Author Box"
             name: "authorbox"
             widget: "select"
             options:
               - { label: "Enable", value: "enabled" }
+              - { label: "Disable", value: "disabled" }
+            default:
               - { label: "Disable", value: "disabled" }
             required: false
           - label: "Menu"
@@ -138,28 +142,35 @@ collections:
         name: "title"
         widget: "string"
         required: true
-      - label: "Date and Author Info"
-        name: "metadate"
-        widget: "string"
-        required: false
-        hint: "hide for hiding or leave it blank."
-      - label: "Content Author"
+      - label: "Author"
         name: "author"
         widget: "string"
         required: false
-        hint: "Ex: Tagbit Community"
+        hint: "Ex: John Doe"
       - label: "Categories"
         name: "categories"
         widget: "list"
         hint: "Each category is separated with comma."
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        hint: "Each tag is separated with comma."
       - label: "Post Image"
         name: "image"
         widget: "image"
-        hint: "Try to add optimised image below 1MB. Makes site faster"
-      - label: "Button URL"
-        name: "visit"
+        hint: "Try to add optimised image below 1MB. Make site load faster."
+      - label: "Description"
+        name: "description"
         widget: "string"
-        hint: "https://tagbit.tk/pintesero"
+        required: false
+        hint: "Small description about the post or review."
+      - label: "Content Rating"
+        name: "rating"
+        widget: "number"
+        min: 0
+        max: 5
+        step: 0.1
+        valueType: "int"
       - label: "Body"
         name: "body"
         widget: "markdown"
