@@ -60,7 +60,20 @@ kramdown:
    syntax_highlighter_opts:
       disable : true
 
-
+# Menu
+menu:
+  - title: "Home"
+    url: "/"
+    badge: ""
+  - title: "Categories"
+    url: "/categories"
+    badge: ""
+  - title: "Contact"
+    url: "/contact"
+    badge: ""
+  - title: "About"
+    url: "/about"
+    badge: "Memoirs Jekyll Theme"
 
 # Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
 adsense: "disabled"

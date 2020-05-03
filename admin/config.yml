@@ -1,0 +1,182 @@
+backend:
+  name: git-gateway
+  branch: master
+
+publish_mode: editorial_workflow
+
+media_folder: "assets/images"
+collections:
+  - label: "Site Settings"
+    name: "settings"
+    editor:
+      preview: false
+      delete: false
+    files:
+      - label: "Site Info"
+        name: "site_info"
+        file: "_config.yml"
+        fields:
+          - label: "Website Name"
+            name: "name"
+            widget: "string"
+            required: true
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            required: true
+            hint: "Ex: Same as your site name."
+          - label: "Description"
+            name: "description"
+            widget: "string"
+            required: false
+            hint: "This will show in search."
+          - label: "Upload Logo"
+            name: "logo"
+            widget: "image"
+            required: false
+            hint: "36px*36px Recommended"
+          - label: "Baseurl"
+            name: "baseurl"
+            widget: "string"
+            required: false
+            hint: "Name of folder where files are stored."
+          - label: "Favicon"
+            name: "favicon"
+            widget: "image"
+            required: true
+          - label: "Google Analytic code"
+            name: "google_analytics"
+            widget: "string"
+            required: false
+            hint: "Ex: UA-xxxxxxxx-1"
+          - label: "Disqus Shortname"
+            name: "disqus"
+            widget: "string"
+            required: true
+            hint: "https://disqus_shortname.disqus.com"
+          - label: "Mailchimp List"
+            name: "mailchimp-list"
+            widget: "string"
+            required: false
+            hint: "https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b"
+          - label: "E-mail"
+            name: "email"
+            widget: "string"
+            hint: "example@domain.com"
+          - label: "Navigation Button"
+            name: "navbutton"
+            widget: "object"
+            fields:
+              - label: "Navigation Button Title"
+                name: "btntitle"
+                widget: "string"
+                required: false
+              - label: "Navigation Button Header"
+                name: "btndes"
+                widget: "string"
+                hint: "Enter small headings for better view."
+                required: false
+              - label: "Navigation Button URL"
+                name: "btnurl"
+                widget: "string"
+                hint: "https://yourdomain.com/"
+                required: false
+          - label: "Menu"
+            name: "menu"
+            widget: "list"
+            required: false
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+                hint: "Text that will show up in the menu."
+              - label: "URL"
+                name: "url"
+                widget: "string"
+                hint: "Ex: /contact"
+              - label: "Badge"
+                name: "badge"
+                widget: "string"
+                required: false
+                hint: "Ex: Add featured to your menu."
+  - label: "Posts"
+    name: "posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "{{title}}"
+    extension: "md"
+    fields:
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD HH:mm:ss"
+      - label: "Layout"
+        name: "layout"
+        widget: "hidden"
+        default: "post"
+      - label: "Post Title"
+        name: "title"
+        widget: "string"
+        required: true
+      - label: "Date and Author Info"
+        name: "metadate"
+        widget: "string"
+        required: false
+        hint: "hide for hiding or leave it blank."
+      - label: "Content Author"
+        name: "author"
+        widget: "string"
+        required: false
+        hint: "Ex: Tagbit Community"
+      - label: "Categories"
+        name: "categories"
+        widget: "list"
+        hint: "Each category is separated with comma."
+      - label: "Post Image"
+        name: "image"
+        widget: "image"
+        hint: "Try to add optimised image below 1MB. Makes site faster"
+      - label: "Button URL"
+        name: "visit"
+        widget: "string"
+        hint: "https://tagbit.tk/pintesero"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+  - label: "Pages"
+    name: "pages"
+    folder: "_pages"
+    create: true
+    slug: "{{slug}}"
+    preview_path: "{{slug}}"
+    extension: "md"
+    fields:
+      - label: "Layout"
+        name: "layout"
+        widget: "hidden"
+        default: "page"
+      - label: "Show in menu"
+        name: "menu"
+        widget: "boolean"
+        default: "false"
+        required: false
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD HH:mm:ss"
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        hint: "Enter your page title."
+      - label: "Page Image"
+        name: "image"
+        widget: "image"
+        hint: "Try to add optimised image below 1MB. Makes site faster"
+      - label: "Permalink"
+        name: "permalink"
+        widget: "hidden"
+        default: "/{{slug}}/"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"

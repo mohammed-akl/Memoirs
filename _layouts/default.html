@@ -9,7 +9,7 @@
 <title>{{ page.title }} | {{site.name}}</title>
 
 {% seo %}
-    
+
 <link href="{{ site.baseurl }}/assets/css/prism.css" rel="stylesheet">
 
 <link href="{{ site.baseurl }}/assets/css/theme.css" rel="stylesheet">
@@ -41,8 +41,8 @@ ga('send', 'pageview');
 <!-- Begin Sidebar Navigation
 ================================================== -->
 
-<div class="sidebar">    
-</div>   
+<div class="sidebar">
+</div>
 <div class="nav-icon">
     <div class="hamburger-bar"></div>
 </div>
@@ -50,11 +50,12 @@ ga('send', 'pageview');
 <nav id="menu">
     <ul>
         <h3>Navigation</h3>
-        <li><a href="{{ site.baseurl }}/">Home</a></li>
-        <li><a href="{{ site.baseurl }}/about">About <span class="badge badge-primary">Memoirs Jekyll Theme</span></a></li>
-        <li><a target="_blank" href="https://bootstrapstarter.com/bootstrap-templates/jekyll-theme-memoirs/">Get Memoirs</a></li>      
-        <li><a href="{{ site.baseurl }}/contact">Contact</a></li>       
-    </ul>   
+    {% for item in site.menu %}
+      {% if item.title, item.badge and item.url %}
+        <li><a href="{{ site.baseurl }}{{item.url}}">{{ item.title}} <span class="badge badge-primary">{{ item.badge }}</span></a></li>
+      {% endif %}
+    {% endfor %}
+    </ul>
 </nav>
 
 {% include search-lunr.html %}
@@ -69,11 +70,11 @@ ga('send', 'pageview');
 
     <!-- Site Logo/Name
     ================================================== -->
-   
+
     <a class="navbar-brand" href="{{ site.baseurl }}/">
         <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}">
-    </a>  
-   
+    </a>
+
 
     <!-- Site Tag
     ================================================== -->
@@ -102,7 +103,7 @@ ga('send', 'pageview');
         </form>
     </div>
     {% endif %}
-    
+
 </div>
 
 <!-- Begin Footer
@@ -111,9 +112,9 @@ ga('send', 'pageview');
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-12 text-center text-lg-left">
-                Copyright © {{ site.time | date: "%Y" }} {{ site.name }} 
+                Copyright © {{ site.time | date: "%Y" }} {{ site.name }}
             </div>
-            <div class="col-md-6 col-sm-12 text-center text-lg-right">    
+            <div class="col-md-6 col-sm-12 text-center text-lg-right">
                 <a target="_blank" href="https://www.wowthemes.net/memoirs-free-jekyll-theme/">Memoirs Jekyll Theme</a> by WowThemes.net
             </div>
         </div>
@@ -126,7 +127,20 @@ ga('send', 'pageview');
 
 <!-- Scripts (if you need bootstrap.js, please add it yourself. I didn't use it for performance reasons, it was not needed in this theme)
 ================================================== -->
-
+<!-- Include the script that adds Netlify Identity Widget  -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+<!-- End script of Netlify CMS -->
 <script src="{{ site.baseurl }}/assets/js/prism.js"></script>
 
 <script src="{{ site.baseurl }}/assets/js/theme.js"></script>
