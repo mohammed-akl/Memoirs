@@ -161,7 +161,7 @@ collections:
       - label: "About You"
         name: "description"
         widget: "text"
-        required: false                
+        required: false
   - label: "Posts"
     name: "posts"
     folder: "_posts"
@@ -181,13 +181,6 @@ collections:
       - label: "Post Title"
         name: "title"
         widget: "string"
-        required: true
-      - label: "Author"
-        name: "author"
-        collection: "authors"
-        widget: "relation"
-        displayFields: [display_name]
-        searchFields: [display_name]
         required: true
       - label: "Categories"
         name: "categories"
