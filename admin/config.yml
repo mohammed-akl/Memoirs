@@ -199,6 +199,13 @@ collections:
         widget: "string"
         required: false
         hint: "Small description about the post or review."
+      - label: "Author"
+        name: "author"
+        widget: "relation"
+        collection: "authors"
+        displayFields: [display_name]
+        searchFields: [display_name]
+        required: true
       - label: "Content Rating"
         name: "rating"
         widget: "number"
