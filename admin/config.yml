@@ -104,7 +104,7 @@ collections:
             default:
               - { label: "Disable", value: "disabled" }
             required: false
-          - label: "Number of post in page"
+          - label: "Number of post in a page"
             name: "paginate"
             widget: "number"
             default: 6
@@ -149,6 +149,11 @@ collections:
         name: "title"
         widget: "string"
         required: true
+      - label: "Author"
+        name: "author"
+        widget: "string"
+        required: false
+        hint: "Ex: John Doe"
       - label: "Categories"
         name: "categories"
         widget: "list"
@@ -166,19 +171,13 @@ collections:
         widget: "string"
         required: false
         hint: "Small description about the post or review."
-      - label: "Author"
-        name: "author"
-        widget: "string"
-        required: true
-        hint: "Ex: Enter the shortname provided in settings."
       - label: "Content Rating"
         name: "rating"
         widget: "number"
         min: 0
         max: 5
-        step: 0.5
+        step: 0.1
         valueType: "float"
-        required: false
       - label: "Image Shadow"
         name: "imageshadow"
         widget: "boolean"
