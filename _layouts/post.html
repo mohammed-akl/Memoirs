@@ -11,7 +11,7 @@ post_class: post-template
     <!-- Author & Date  Box -->
     {% for author in site.authors %}
     {% assign author = site.authors | where: "name", post.author | first %}
-    {% if page.author %}
+    {% if page.author == site.author.name %}
     <div class="d-flex align-items-center mt-4">
         <div>
             {% if author.avatar %}
