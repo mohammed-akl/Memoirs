@@ -13,7 +13,7 @@ permalink: /:title/
 email: wowthemesnet@gmail.com
 
 # Authors
-authors:
+author:
   - name: John
     display_name: John
     avatar: 'assets/images/avatar.png'
