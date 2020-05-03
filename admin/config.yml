@@ -89,21 +89,21 @@ collections:
           - label: "Lazy Images"
             name: "lazyimages"
             widget: "select"
+            required: true
             options:
               - { label: "Enable", value: "enabled" }
               - { label: "Disable", value: "disabled" }
             default:
               - { label: "Disable", value: "disabled" }
-            required: false
           - label: "Author Box"
             name: "authorbox"
             widget: "select"
+            required: true
             options:
               - { label: "Enable", value: "enabled" }
               - { label: "Disable", value: "disabled" }
             default:
               - { label: "Disable", value: "disabled" }
-            required: false
           - label: "Number of post in a page"
             name: "paginate"
             widget: "number"
