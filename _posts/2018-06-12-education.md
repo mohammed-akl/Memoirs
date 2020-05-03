@@ -12,7 +12,7 @@ tags:
   - blog
 image: assets/images/3.jpg
 author: muhammed ashfar
-rating: 0.8
+rating: 0.5
 ---
 Memoirs theme has Prism highlighter integrated. I will show you in this post a few examples of how it looks if you are a developer planning to add pieces of code on your website.
 

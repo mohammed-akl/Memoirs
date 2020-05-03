@@ -213,6 +213,7 @@ collections:
         max: 5
         step: 0.1
         valueType: "float"
+        required: false
       - label: "Image Shadow"
         name: "imageshadow"
         widget: "boolean"
