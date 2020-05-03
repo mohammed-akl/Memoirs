@@ -63,24 +63,43 @@ collections:
             name: "email"
             widget: "string"
             hint: "example@domain.com"
-          - label: "Navigation Button"
-            name: "navbutton"
+          - label: "Googe Adsense"
+            name: "adsense"
             widget: "object"
             fields:
-              - label: "Navigation Button Title"
-                name: "btntitle"
+              - label: "Status"
+                name: "status"
+                widget: "select"
+                options:
+                  - { label: "Enable", value: "enabled" }
+                  - { label: "Disable", value: "disabled" }
+                default:
+                  - { label: "Disable", value: "disabled" }
+                required: true
+              - label: "Adsense Data Ad Client"
+                name: "adsense-data-ad-client"
                 widget: "string"
+                hint: "Ex: ca-pub-3412143450191416"
                 required: false
-              - label: "Navigation Button Header"
-                name: "btndes"
+              - label: "Adsense Data Ad Slot"
+                name: "adsense-data-ad-slot"
                 widget: "string"
-                hint: "Enter small headings for better view."
+                hint: "Ex: 1363087678"
                 required: false
-              - label: "Navigation Button URL"
-                name: "btnurl"
-                widget: "string"
-                hint: "https://yourdomain.com/"
-                required: false
+          - label: "Lazy Images"
+            name: "lazyimages"
+            widget: "select"
+            options:
+              - { label: "Enable", value: "enabled" }
+              - { label: "Disable", value: "disabled" }
+            required: false
+          - label: "Author Box"
+            name: "authorbox"
+            widget: "select"
+            options:
+              - { label: "Enable", value: "enabled" }
+              - { label: "Disable", value: "disabled" }
+            required: false
           - label: "Menu"
             name: "menu"
             widget: "list"
