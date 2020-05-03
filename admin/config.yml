@@ -205,7 +205,7 @@ collections:
         collection: "authors"
         displayFields: [display_name]
         searchFields: [display_name]
-        required: true
+        valueField: "name"
       - label: "Content Rating"
         name: "rating"
         widget: "number"
