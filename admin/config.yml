@@ -104,6 +104,53 @@ collections:
             default:
               - { label: "Disable", value: "disabled" }
             required: false
+          - label: "Number of post in page"
+            name: "paginate"
+            widget: "number"
+            default: 6
+            valueType: "float"
+            step: 1
+            hint: "Ex: 8"
+          - label: "Author"
+            name: "author"
+            widget: "object"
+            fields:
+              - label: "Name"
+                name: "name"
+                widget: "string"
+                hint: "Ex: john. (Use Shortname)"
+              - label: "Display Name"
+                name: "display_name"
+                widget: "string"
+                hint: "Ex: John Doe"
+              - label: "Avatar"
+                name: "avatar"
+                widget: "image"
+                hint: "*Use optimised images for better results."
+              - label: "Gravatar ID"
+                name: "gravatar"
+                widget: "string"
+                hint: "Ex: b1cc14991db7a456fcd761680bbc8f81"
+                required: false
+              - label: "E-mail"
+                name: "email"
+                widget: "string"
+                hint: "Ex: john@example.com"
+                required: false
+              - label: "Website"
+                name: "web"
+                widget: "string"
+                hint: "Ex: johndoe.me"
+                required: false
+              - label: "Twitter Link"
+                name: "twitter"
+                widget: "string"
+                hint: "Ex: https://twitter.com/johndoe"
+                required: false
+              - label: "About Me"
+                name: "description"
+                widget: "text"
+                required: false
           - label: "Menu"
             name: "menu"
             widget: "list"
@@ -122,46 +169,6 @@ collections:
                 widget: "string"
                 required: false
                 hint: "Ex: Add featured to your menu."
-  - label: "Authors"
-    name: "authors"
-    identifier_field: "display_name"
-    folder: "_authors/"
-    create: true
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - label: "Gravatar ID"
-        name: "gravatar"
-        widget: "string"
-        required: false
-        hint: "Ex: e56154546cf4be74e393c62d1ae9f9d4"
-      - label: "Profile"
-        name: "avatar"
-        widget: "image"
-        required: false
-      - label: "Short Name"
-        name: "name"
-        widget: "string"
-      - label: "Diplay Name"
-        name: "display_name"
-        widget: "string"
-      - label: "E-mail"
-        name: "email"
-        widget: "string"
-        required: false
-      - label: "Website"
-        name: "web"
-        widget: "string"
-      - label: "Twitter"
-        name: "twitter"
-        widget: "string"
-        hint: "Ex: https://twitter.com/wowthemesnet"
-        required: false
-      - label: "About You"
-        name: "description"
-        widget: "text"
-        required: false
   - label: "Posts"
     name: "posts"
     folder: "_posts"
@@ -201,11 +208,9 @@ collections:
         hint: "Small description about the post or review."
       - label: "Author"
         name: "author"
-        widget: "relation"
-        collection: "authors"
-        displayFields: [display_name]
-        searchFields: [display_name]
-        valueField: "name"
+        widget: "string"
+        required: true
+        hint: "Ex: Enter the shortname provided in settings."
       - label: "Content Rating"
         name: "rating"
         widget: "number"

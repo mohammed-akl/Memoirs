@@ -9,9 +9,8 @@ post_class: post-template
     <!-- Post Title -->
     <h1 class="posttitle">{{ page.title }}</h1>
     <!-- Author & Date  Box -->
-    {% for author in site.authors %}
     {% assign author = site.authors | where: "name", post.author | first %}
-    {% if page.author == site.author.name %}
+    {% if page.author %}
     <div class="d-flex align-items-center mt-4">
         <div>
             {% if author.avatar %}
@@ -29,7 +28,6 @@ post_class: post-template
         </div>
     </div>
     {% endif %}
-    {% endfor %}
 </div>
 
 <!-- Adsense under title if enabled from _config.yml (change your pub id and slot) -->
