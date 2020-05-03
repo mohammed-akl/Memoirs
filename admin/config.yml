@@ -249,14 +249,10 @@ collections:
         widget: "string"
         required: false
       - label: "Website"
-        name: "https://www.wowthemes.net/donate/"
+        name: "web"
         widget: "string"
       - label: "Twitter"
         name: "twitter"
-        widget: "string"
-        required: false
-      - label: "Facebook Username"
-        name: "facebook_username"
         widget: "string"
         hint: "Ex: https://twitter.com/wowthemesnet"
         required: false
