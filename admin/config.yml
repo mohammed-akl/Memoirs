@@ -171,6 +171,14 @@ collections:
         max: 5
         step: 0.1
         valueType: "int"
+      - label: "Image Shadow"
+        name: "imageshadow"
+        widget: "boolean"
+        required: false
+      - label: "TOC"
+        name: "toc"
+        widget: "boolean"
+        required: false
       - label: "Body"
         name: "body"
         widget: "markdown"
