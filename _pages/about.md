@@ -1,10 +1,11 @@
 ---
 layout: page
-title: Memoirs, a free minimalist Jekyll blogging theme with modern design 
-permalink: /about
-comments: false
+date: 2020-05-04 13:07:19
+title: About
 image: assets/images/screenshot.jpg
 imageshadow: true
+comments: false
+permalink: /about
 ---
 
 This website is a demonstration to see **Memoirs Jekyll theme** in action. The theme is compatible with Github pages, in fact even this demo itself is created with Github Pages and hosted with Github. 
