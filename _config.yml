@@ -12,6 +12,10 @@ include: ["_pages"]
 permalink: /:title/
 email: wowthemesnet@gmail.com
 
+collections:
+  authors:
+    output: true
+
 # Plugins
 plugins:
   - jekyll-paginate
