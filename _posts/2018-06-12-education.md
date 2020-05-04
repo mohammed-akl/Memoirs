@@ -11,7 +11,7 @@ categories:
   - Lifestyle
 tags:
   - demo
-image: assets/images/3.jpg
+image: /assets/images/3.jpg
 rating: 0.5
 ---
 Memoirs theme has Prism highlighter integrated. I will show you in this post a few examples of how it looks if you are a developer planning to add pieces of code on your website.
@@ -32,11 +32,11 @@ Memoirs theme has Prism highlighter integrated. I will show you in this post a f
 ```css
 .highlight .c {
     color: #999988;
-    font-style: italic; 
+    font-style: italic;
 }
 .highlight .err {
     color: #a61717;
-    background-color: #e3d2d2; 
+    background-color: #e3d2d2;
 }
 ```
 
