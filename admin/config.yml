@@ -129,6 +129,55 @@ collections:
                 widget: "string"
                 required: false
                 hint: "Ex: Add featured to your menu."
+  - label: "Authors"
+    name: "authors"
+    folder: "_authors"
+    create: true
+    identifier_field: "name"
+    slug: "{{slug}}"
+    editor:
+      preview: false
+      delete: false
+    fields:
+      - label: "Shortname"
+        name: "name"
+        widget: "string"
+        required: true
+        hint: "Ex: john (Use samll letters)"
+      - label: "Display Name"
+        name: "display_name"
+        widget: "string"
+        required: true
+        hint: "Ex: John Doe"
+      - label: "Avatar"
+        name: "avatar"
+        widget: "image"
+        required: false
+        hint: "Use optimised images"
+      - label: "Gravatar ID"
+        name: "gravatar"
+        widget: "string"
+        required: false
+        hint: "Ex: b1cc14991db7a456fcd761680bbc8f81"
+      - label: "E-mail"
+        name: "email"
+        widget: "string"
+        required: false
+        hint: "Ex: john@example.com"
+      - label: "Website"
+        name: "web"
+        widget: "string"
+        required: false
+        hint: "Ex: johdoe.me"
+      - label: "Twitter Link"
+        name: "twitter"
+        widget: "string"
+        required: false
+        hint: "Ex: https://twitter.com/johndoe"
+      - label: "About You"
+        name: "description"
+        widget: "text"
+        required: false
   - label: "Posts"
     name: "posts"
     folder: "_posts"
@@ -151,8 +200,12 @@ collections:
         required: true
       - label: "Author"
         name: "author"
-        widget: "string"
-        required: false
+        widget: "relation"
+        collection: "authors"
+        searchFields: [display_name]
+        displayFields: [display_name]
+        valueField: "name"
+        required: true
         hint: "Ex: John Doe"
       - label: "Categories"
         name: "categories"
@@ -176,8 +229,9 @@ collections:
         widget: "number"
         min: 0
         max: 5
-        step: 0.1
+        step: 0.5
         valueType: "float"
+        required: false
       - label: "Image Shadow"
         name: "imageshadow"
         widget: "boolean"
