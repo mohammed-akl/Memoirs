@@ -271,6 +271,7 @@ collections:
       - label: "Page Image"
         name: "image"
         widget: "image"
+        required: false
         hint: "Try to add optimised image below 1MB."
       - label: "Image Shadow"
         name: "imageshadow"
@@ -283,8 +284,9 @@ collections:
         default: "false"
       - label: "Permalink"
         name: "permalink"
-        Widget: "hidden"
+        widget: "hidden"
         default: "/{{slug}}"
       - label: "Body"
         name: "body"
         widget: "markdown"
+        required: false
