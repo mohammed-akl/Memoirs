@@ -23,7 +23,7 @@ adsense:
   adsense-data-ad-slot: "1363087678"
 permalink: /:title/
 email: wowthemesnet@gmail.com
-lazyimages: disabled
+lazyimages: enabled
 paginate_path: /page:num/
 sass:
   sass_dir: _sass
