@@ -1,5 +1,5 @@
 ---
-name: John
+name: john
 display_name: John
 avatar: 'assets/images/avatar.png'
 gravatar: b1cc14991db7a456fcd761680bbc8f81

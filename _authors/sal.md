@@ -1,5 +1,5 @@
 ---
-name: Sal
+name: sal
 display_name: Sal
 gravatar: e56154546cf4be74e393c62d1ae9f9d4
 email: wowthemesnet@gmail.com
