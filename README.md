@@ -1,5 +1,5 @@
 # Memoirs Jekyll Theme
 
-[Live Demo](https://wowthemesnet.github.io/jekyll-theme-memoirs/) | [Docs & Download](https://bootstrapstarter.com/bootstrap-templates/jekyll-theme-memoirs/) |  [Buy me a coffee](https://www.wowthemes.net/donate/)
+[Live Demo](https://memoirs.aprende.tk/) | [Docs & Download](https://tagbit.tk/)
 
 ![memoirs](https://bootstrapstarter.com/assets/img/themes/memoirs-jekyll.jpg)
