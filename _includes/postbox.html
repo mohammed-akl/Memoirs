@@ -1,5 +1,5 @@
 <!-- begin post -->
-{% assign author = site.authors[post.author] %}
+{% assign author = site.authors | where: "name", post.author | first %}
 
 <div class="blog-grid-item">
     <div class="card h-100">
