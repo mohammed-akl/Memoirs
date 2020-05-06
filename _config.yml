@@ -1,5 +1,5 @@
 google_analytics: UA-xxxxxxxx-1
-authorbox: enabled
+authorbox: disabled
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -63,3 +63,6 @@ menu:
   - title: About
     url: /about
     badge: Memoirs Jekyll Theme
+  - title: Tags
+    url: /tags
+    badge: New
