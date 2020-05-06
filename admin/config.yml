@@ -247,6 +247,7 @@ collections:
     name: "pages"
     folder: "_pages"
     create: true
+    identifier_field: "title"
     slug: "{{slug}}"
     preview_path: "{{slug}}"
     extension: "md"
@@ -255,11 +256,11 @@ collections:
         name: "layout"
         widget: "hidden"
         default: "page"
-      - label: "Show in menu"
-        name: "menu"
-        widget: "boolean"
-        default: "false"
+      - label: "Permalink"
+        name: "permalink"
+        widget: "string"
         required: false
+        hint: "Ex: /your-page-name"
       - label: "Publish Date"
         name: "date"
         widget: "datetime"
