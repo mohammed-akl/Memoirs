@@ -259,8 +259,8 @@ collections:
       - label: "Permalink"
         name: "permalink"
         widget: "string"
-        required: false
-        hint: "Ex: /your-page-name"
+        required: true
+        hint: "Ex: /your-page-name or /name/your-page-name"
       - label: "Publish Date"
         name: "date"
         widget: "datetime"
