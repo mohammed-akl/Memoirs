@@ -390,7 +390,9 @@ img, img:hover {
         margin-top:30px;
     }
 }
-
+.card.h-100 {
+  box-shadow: 0 30px 60px -10px rgba(0,0,0,.22), 0 18px 36px -18px rgba(0,0,0,.25);
+}
 // blog
 .article-post, .entry-header, .comments, .rating, .authorbox {
     max-width: 740px;
