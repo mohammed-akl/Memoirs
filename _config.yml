@@ -57,12 +57,12 @@ menu:
   - title: Categories
     url: /categories
     badge: ""
+  - title: Tags
+    url: /tags
+    badge: New
   - title: Contact
     url: /contact
     badge: ""
   - title: About
     url: /about
     badge: Memoirs Jekyll Theme
-  - title: Tags
-    url: /tags
-    badge: New
